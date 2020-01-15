@@ -14,7 +14,7 @@ pipeline {
       }
     }
 
-    stage('Build SSR') {
+    stage('Build') {
       steps {
         sh 'npm run build --prod'
       }

@@ -14,7 +14,7 @@ pipeline {
       }
     }
 
-    stage('Build SSR') {
+    stage('Build') {
       steps {
         sh 'npm run build --prod'
       }
@@ -22,8 +22,8 @@ pipeline {
     
     stage('Run on nginx') {
       steps {
+         sh 'rm -r prod'
          sh 'cp -a www prod'
-         sh 'systemctl restart nginx'
       }
     }  
   }     

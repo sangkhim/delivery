@@ -23,7 +23,6 @@ pipeline {
     stage('Run on nginx') {
       steps {
          sh 'cp -a www prod'
-         sh 'systemctl restart nginx'
       }
     }  
   }     

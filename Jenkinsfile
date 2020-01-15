@@ -22,6 +22,7 @@ pipeline {
     
     stage('Run on nginx') {
       steps {
+         sh 'rm -r prod'
          sh 'cp -a www prod'
       }
     }  
